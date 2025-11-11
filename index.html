@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vetri it systems </title>
+</head>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+
+    }
+    .body{
+        font-family: sans-serif;
+        font-size: 20px;
+        
+    }
+    header{
+        background-color: azure;
+        /* padding:20px; */
+    }
+    .logo{
+        height:4%;
+        width:6%;
+
+    }
+    .navbar{
+display:flex;
+justify-content:space-around;
+align-items: center;
+    }
+    .navlist{
+        display:flex;
+        gap:30px;
+        
+    }
+    .navlist li{
+list-style: none;
+
+    }
+    a{
+    font-size:20px;
+        color:grey;
+        text-decoration: none;
+
+       }
+       .button{
+        background-color: #0057ff;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+
+       }
+       .container{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        height:50vh;
+        padding-bottom: 30px;
+       }
+       .left{
+        display:flex;
+        flex-direction:column;
+        text-align: left;
+        max-width:70%;
+        padding-left: 50px;
+        padding-top: 50px;
+        line-height: 2rem;
+        word-spacing: 1.2px;
+        font-size:20px;
+        gap:15px;
+
+       }
+ .left span{
+    color:#0057ff;
+ }
+ .containe2{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    padding:20px;
+
+ }
+    .btt{
+         background-color: #0057ff;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+
+       
+    }
+    .container3{
+        padding:30px 60px;
+        background-color: white;
+        height: 70vh;
+        width:100%;
+    }
+    .rrt{
+         display:grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    .left1 img{
+        height:400px;
+        width:450px;
+    }
+.best img{
+    background-color: azure;
+    width:40px;
+    height:40px;
+}
+.best{
+    display: flex;
+    gap:10px;
+}
+.right1{
+    padding-top: 30px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width: 100%;
+}
+.right1 p{
+    font-size:20px;
+}
+.roght2 p{
+    color: #0057ff;
+    font-weight: bold;
+    font-size: 24px;
+
+}
+.out h2{
+    color: #0057ff;
+    font-weight: bolder;
+
+}
+.out{
+    max-width:100%;
+    height: 40vh;
+    text-align: center;
+    font-size: 22px;
+    padding:30px;
+    align-items: center;
+
+}
+.out p{
+    font-size: 18px;
+            color: #666;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+}
+
+        .footer {
+            background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+            color: white;
+            padding: 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 60px;
+        }
+
+        .footer-section {
+            flex: 1;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+ .logo{
+        height:6%;
+        width:8%;
+
+    }
+        
+
+        .company-name {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .footer-heading {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .contact-icon {
+            font-size: 18px;
+            margin-top: 3px;
+        }
+
+        .contact-text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 968px) {
+            .footer {
+                flex-direction: column;
+                gap: 40px;
+                padding: 40px 30px;
+            }
+
+            .footer-section {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                padding: 30px 20px;
+            }
+
+            .company-name {
+                font-size: 24px;
+            }
+
+            .footer-heading {
+                font-size: 18px;
+            }
+
+            .contact-text {
+                font-size: 14px;
+            }
+        }
+        .logo1{
+            width:10%;
+            height:10%;
+        }
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="vts logo.webp" class="logo">
+            <ul class="navlist">
+                <li><a href="#about">about us</a></li>
+                <li><a href="#webdev">web development</a></li>
+                <li><a href="#sw dev">software development</a></li>
+                <li><a href="#digital">digital marketing</a></li>
+                <li><a href="#en" class="button">enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="left">
+            <h2><span>Technology</span> is best when it brings people together.</h2>
+            <p>At <span>Vetri IT Systems,</span> we specialize in providing advanced technology solutions tailored to meet the unique needs of every business.</p>
+            <div class="containe2">
+                <div class="tex">
+                    <h3>20+</h3>
+                    <p>projects</p>
+                    <div class="border-l border-gray-400 h-6" style="opacity: 1; transform: none;"></div>
+
+                </div>
+                 <div class="tex">
+                    <h3>20+</h3>
+                    <p>clients</p>
+                    <div class="border-l border-gray-400 h-6" style="opacity: 1; transform: none;"></div>
+
+                </div>|
+                 <div class="tex">
+                    <h3>30+</h3>
+                    <p>innovations</p>
+                    <div class="border-l border-gray-400 h-6" style="opacity: 1; transform: none;"></div>
+
+                </div></div>
+                <button class="btt">GET STARTED</button>
+   
+        </div>
+        <div class="right">
+            <img src="vts1.webp" class="img1">
+        </div>
+
+    </section>
+    <section class="container3">
+        <div class="rrt">
+        <div class="left1">
+            <img src="vts2.webp">
+        </div>
+
+    <div class="right1">
+        <div class="roght2">
+            <p>
+                Why We Are The BestFrom Others?
+            </p>
+        </div>
+            <div class="best">
+                <img src="3.webp">
+                <p>On Time Delivery</p>
+            </div>
+             <div class="best">
+                <img src="4.png">
+                <p>quality services</p>
+            </div>
+             <div class="best">
+                <img src="5.png">
+                <p>expertise that lead</p>
+            </div>
+             <div class="best">
+                <img src="6.png">
+                <p>affordable price</p>
+            </div>
+             <div class="best">
+                <img src="7.png">
+                <p>best customer support</p>
+            </div>
+             <div class="best">
+                <img src="8.png">
+                <p>proven results and happy clients</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <div class="out">
+        <h2>Our Work Process</h2>
+        <p>Our innovative process combines cutting-edge technology with creative problem-solving, ensuring tailored solutions that drive efficiency and growth for our clients.
+
+</p>
+
+    </div>
+    <img alt="Work Process" class="w-full h-auto object-cover rounded-xl" src="/assets/VIS%20Work%20Process-DNshnsLN.png">
+     <footer class="footer">
+        <div class="footer-section logo-section">
+            <div class="logo-circle">
+                <img src="vts logo.webp" class="logo1">
+            </div>
+            <div class="company-name">
+                Vetri<br>IT Systems
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#web">Web Development</a></li>
+                <li><a href="#software">Software Development</a></li>
+                <li><a href="#marketing">Digital Marketing</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Contact Details</h3>
+            <div class="contact-item">
+                <i class="fas fa-phone contact-icon"></i>
+                <div class="contact-text">8438558627, 8438558527</div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <div class="contact-text">business@vetriiit.com</div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <div class="contact-text">VTS & VIS, April's Complex,<br>Shanthi Complex, Surandai.</div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
