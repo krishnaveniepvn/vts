@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+    
+    header{
+        background-color: azure;
+        /* padding:20px; */
+    }
+    .logo{
+        height:4%;
+        width:6%;
+
+    }
+    .navbar{
+display:flex;
+justify-content:space-around;
+align-items: center;
+    }
+    .navlist{
+        display:flex;
+        gap:30px;
+        
+    }
+    .navlist li{
+list-style: none;
+
+    }
+    a{
+    font-size:20px;
+        color:grey;
+        text-decoration: none;
+
+       }
+       .button{
+        background-color: #0057ff;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+
+       }
+        
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Section */
+        .hero-section {
+            /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .hero-text h1 .highlight {
+            color: #3498db;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: float 3s ease-in-out infinite;
+            height: 400px;
+            width:350px;
+
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            /* filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1)); */
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Native App Section */
+        .native-app-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .native-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .native-illustration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInLeft 1s ease;
+        }
+
+        .native-illustration img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .native-text h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .native-text h2 .highlight {
+            color: #3498db;
+        }
+
+        .native-text p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Placeholder Images */
+        .placeholder-img {
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 40px;
+            min-height: 400px;
+
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content,
+            .native-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-text h1,
+            .native-text h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section,
+            .native-app-section {
+                padding: 60px 0;
+            }
+
+            .native-content {
+                direction: ltr;
+            }
+
+            .native-illustration {
+                order: 1;
+            }
+
+            .native-text {
+                order: 2;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-text h1,
+            .native-text h2 {
+                font-size: 2rem;
+            }
+
+            .hero-text p,
+            .native-text p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Decorative Elements */
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+            color: white;
+            padding: 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 60px;
+        }
+
+        .footer-section {
+            flex: 1;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+ .logo1{
+        height:10%;
+        width:10%;
+
+    }
+        
+
+        .company-name {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .footer-heading {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .contact-icon {
+            font-size: 18px;
+            margin-top: 3px;
+        }
+
+        .contact-text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 968px) {
+            .footer {
+                flex-direction: column;
+                gap: 40px;
+                padding: 40px 30px;
+            }
+
+            .footer-section {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                padding: 30px 20px;
+            }
+
+            .company-name {
+                font-size: 24px;
+            }
+
+            .footer-heading {
+                font-size: 18px;
+            }
+
+            .contact-text {
+                font-size: 14px;
+            }
+        }
+        .logo1{
+            width:10%;
+            height:10%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="vts logo.webp" class="logo">
+            <ul class="navlist">
+                <li><a href="about.html">about us</a></li>
+                <li><a href="ani.html">web development</a></li>
+                <li><a href="gg.html">software development</a></li>
+                <li><a href="#digital">digital marketing</a></li>
+                <li><a href="enquiry .html" class="button">enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1><span class="highlight">Software</span> Development</h1>
+                    <p>
+                        Software Development Services involve designing, creating, deploying, and maintaining software applications tailored to meet specific business needs. These services cover a range of offerings, including custom application development, software consulting, system integration, cloud solutions, and mobile or web app development. They enable businesses to optimize processes, improve efficiency, and deliver seamless user experiences by leveraging cutting-edge technologies and agile methodologies. A focus on scalability, security, and innovation ensures that the solutions align with evolving market demands and organizational goals.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    
+                   <img src="sd.gif">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Native App Section -->
+    <section class="native-app-section">
+        <div class="container">
+            <div class="native-content">
+                <div class="native-illustration">
+                    <div class="placeholder-img placeholder-img-alt">
+                        <div>
+                           <img src="sd2.gif">
+                            <p style="margin-top: 20px;">Native App Development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="native-text">
+                    <h2><span class="highlight">Native App</span> Development</h2>
+                    <p>Our Native App Development services offer end-to-end solutions to bring your app ideas to life. From concept and design to development and deployment, we build high-performance, user-friendly apps for iOS, Android, and cross-platform environments. Whether you're launching a startup or enhancing an existing business, our team ensures seamless functionality, modern UI/UX, and scalable architecture tailored to your goals.
+                    </p>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+       <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1><span class="highlight">hybrid app</span> Development</h1>
+                    <p>
+                       Our hybrid app development services combine the power of web and native technologies to deliver high-performance mobile apps that work seamlessly across both Android and iOS platforms. We use modern frameworks like Flutter and React Native to create cost-effective, scalable, and feature-rich applications, helping businesses reach a wider audience with a single codebase.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    
+                   <img src="sd3.gif">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Native App Section -->
+    <section class="native-app-section">
+        <div class="container">
+            <div class="native-content">
+                <div class="native-illustration">
+                    <div class="placeholder-img placeholder-img-alt">
+                        <div>
+                           <img src="sd4.gif">
+                            <p style="margin-top: 20px;">Native App Development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="native-text">
+                    <h2><span class="highlight">progressive App</span> Development</h2>
+                    <p>Our Native App Development services offer end-to-end solutions to bring your app ideas to life. From concept and design to development and deployment, we build high-performance, user-friendly apps for iOS, Android, and cross-platform environments. Whether you're launching a startup or enhancing an existing business, our team ensures seamless functionality, modern UI/UX, and scalable architecture tailored to your goals.
+                    </p>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1><span class="highlight">wearable and embedded</span> Development</h1>
+                    <p>
+                       Our hybrid app development services combine the power of web and native technologies to deliver high-performance mobile apps that work seamlessly across both Android and iOS platforms. We use modern frameworks like Flutter and React Native to create cost-effective, scalable, and feature-rich applications, helping businesses reach a wider audience with a single codebase.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    
+                   <img src="sd5.gif">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer class="footer">
+        <div class="footer-section logo-section">
+            <div class="logo-circle">
+                <img src="vts logo.webp" class="logo1">
+            </div>
+            <div class="company-name">
+                Vetri<br>IT Systems
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#web">Web Development</a></li>
+                <li><a href="#software">Software Development</a></li>
+                <li><a href="#marketing">Digital Marketing</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Contact Details</h3>
+            <div class="contact-item">
+                <i class="fas fa-phone contact-icon"></i>
+                <div class="contact-text">8438558627, 8438558527</div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <div class="contact-text">business@vetriiit.com</div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <div class="contact-text">VTS & VIS, April's Complex,<br>Shanthi Complex, Surandai.</div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static vs Dynamic Websites</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            border-radius: 2px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .comparison-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        .static-header {
+            background: linear-gradient(to right, #3498db, #2980b9);
+        }
+        
+        .dynamic-header {
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-body p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .features {
+            margin-top: 20px;
+        }
+        
+        .features h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .features ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+        
+        .static-features li:before {
+            color: #3498db;
+        }
+        
+        .dynamic-features li:before {
+            color: #e74c3c;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card {
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Website Types Comparison</h1>
+            <p class="subtitle">Understanding the differences between static and dynamic websites for your project needs</p>
+        </header>
+        
+        <div class="comparison-container">
+            <div class="card">
+                <div class="card-header static-header">
+                    <div class="card-icon">📄</div>
+                    <h2>Static Website</h2>
+                </div>
+                <div class="card-body">
+                    <p>A static website is a simple and reliable solution for service-based projects. It delivers content quickly without relying on databases or dynamic processing. Ideal for portfolios, company profiles, or informational pages, it ensures fast performance and low maintenance costs.</p>
+                    
+                    <div class="features static-features">
+                        <h3>Ideal For:</h3>
+                        <ul>
+                            <li>Portfolios and resumes</li>
+                            <li>Company profiles</li>
+                            <li>Informational pages</li>
+                            <li>Brochure websites</li>
+                            <li>Landing pages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header dynamic-header">
+                    <div class="card-icon">🔄</div>
+                    <h2>Dynamic Website</h2>
+                </div>
+                <div class="card-body">
+                    <p>A dynamic website is an interactive platform that updates content in real time based on user inputs or actions. It uses databases and server-side scripting to deliver personalized experiences, making it ideal for service projects like user portals, e-commerce sites, or dashboards. Dynamic websites enhance engagement and provide scalable, efficient solutions for modern businesses.</p>
+                    
+                    <div class="features dynamic-features">
+                        <h3>Ideal For:</h3>
+                        <ul>
+                            <li>User portals</li>
+                            <li>E-commerce sites</li>
+                            <li>Dashboards</li>
+                            <li>Social media platforms</li>
+                            <li>Content management systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Choose the right website type based on your project requirements and goals</p>
+        </footer>
+    </div>
+</body>
+</html>
